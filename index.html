@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lucky — Simple Website</title>
+
+  <!-- CSS link -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#" class="logo">Lucky</a>
+
+      <button class="nav-toggle" aria-label="Toggle menu" id="menuBtn">
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="themeToggle" class="btn btn-ghost" aria-label="Toggle theme">
+            🌓
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container" id="home">
+      <div class="hero-text">
+        <h1>Welcome to <span class="accent">Lucky</span> 🎉</h1>
+        <p>Ye ek simple, responsive starter template hai—HTML, CSS aur JS alag files me.</p>
+        <div class="cta-row">
+          <a href="#features" class="btn">Explore</a>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
+        </div>
+      </div>
+      <div class="hero-card" role="img" aria-label="Decorative card"></div>
+    </section>
+
+    <!-- Features -->
+    <section class="section container" id="features">
+      <h2 class="section-title">Features</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Fast</h3>
+          <p>Lightweight markup aur minimal CSS for speed.</p>
+        </article>
+        <article class="card">
+          <h3>Responsive</h3>
+          <p>Mobile-first layout jo sab screens pe ache se kaam kare.</p>
+        </article>
+        <article class="card">
+          <h3>Interactive</h3>
+          <p>JS se theme toggle, menu toggle, simple form handling.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section container" id="contact">
+      <h2 class="section-title">Contact</h2>
+      <form id="contactForm" class="form" novalidate>
+        <div class="form-field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Aapka naam" required />
+          <small class="error" data-for="name"></small>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="name@example.com" required />
+          <small class="error" data-for="email"></small>
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Aapka message..." required></textarea>
+          <small class="error" data-for="message"></small>
+        </div>
+
+        <button type="submit" class="btn">Send</button>
+        <p id="formStatus" class="status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Lucky. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- JS link (defer = body load ke baad chalega) -->
+  <script src="script.js" defer></script>
+</body>
+</html>
